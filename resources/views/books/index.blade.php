@@ -36,7 +36,11 @@
                     <input type="hidden" name="id" value="{{ $book->id}}">
                     <button class="btn btn-danger">წაშლა</button>
                 </form>
-                    <button class="btn btn-warning">ჩასწორება</button>
+                <form action="{{ route('adminbookedit', ["id" => $book->id])}}" method="get">
+              
+                
+                <button class="btn btn-warning" type="submit">ჩასწორება</button>
+            </form>
             <a href="{{ route('books')}}" class="btn btn-success">დათვალიერება</a>
                
                 </td>
