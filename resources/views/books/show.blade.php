@@ -22,6 +22,7 @@
             <tr>
                 <td>{{++$loop->index}}</td>
                 <td>{{ $book->title}}</td>
+                <td><img src="{{ $book->picture}}"/></td>
                 <td>
                 <form action="{{ route('booksbygenre',["id"=> $book->genre_id])}}" method="GET">
                     <button class="btn btn-secodary">{{$book->genre_id}}</button>
